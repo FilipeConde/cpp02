@@ -3,11 +3,15 @@
 
 class Fixed{
   private:
-    int fixedVal;
-    static const int fractionalBits;
+    int _fixedVal;
+    static const int _fractionalBits;
 
   public:
     // Constructors
+    Fixed();
+    Fixed(const Fixed &other);
+    Fixed& operator=(const Fixed &other);
+    ~Fixed();
     int getRawBits() const;
     void setRawBits(int const raw);
 };
