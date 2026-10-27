@@ -3,8 +3,6 @@
 
 int main(){
 
-  std::cout << "TEST" << std::endl;
-
   Fixed a;
   Fixed b( a );
   Fixed c;
