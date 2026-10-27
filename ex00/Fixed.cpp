@@ -20,6 +20,14 @@ Fixed::~Fixed(){
     std::cout << "Destructor called" << std::endl;
 }
 
+int Fixed::getRawBits() const{
+    return (_fixedVal);
+}
+
+void Fixed::setRawBits(int const raw){
+    _fixedVal = raw;
+}
+
 //   private:
 //     int _fixedVal;
 //     static const int _fractionalBits;
@@ -30,5 +38,5 @@ Fixed::~Fixed(){
 // OK  Fixed(const Fixed &other);
 // OK  Fixed& operator=(const Fixed &other);
 // OK  ~Fixed();
-//     int getRawBits() const;
-//     void setRawBits(int const raw);
+// OK  int getRawBits() const;
+// OK  void setRawBits(int const raw);
