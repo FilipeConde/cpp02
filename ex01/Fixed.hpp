@@ -9,9 +9,14 @@ class Fixed{
 
   public:
     Fixed();
+    // Fixed(const int val);
+    // Fixed(const float val);
     Fixed(const Fixed &other);
     Fixed& operator=(const Fixed &other);
     ~Fixed();
+
+    // float toFloat( void ) const;
+    // int toInt( void ) const;
 
     int getRawBits() const;
     void setRawBits(int const raw);
