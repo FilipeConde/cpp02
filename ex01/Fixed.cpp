@@ -10,9 +10,8 @@ Fixed::Fixed(const int val) : _fixedVal(val << _fractionalBits) {
     std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float val) : _fixedVal(val * (1 << _fractionalBits)) {
+Fixed::Fixed(const float val) : _fixedVal(roundf(val * (1 << _fractionalBits))) {
     std::cout << "Float constructor called" << std::endl;
-    std::cout << "Float val: " << _fixedVal << std::endl;
 }
 
 Fixed::Fixed(const Fixed &other) : _fixedVal(other._fixedVal) {
