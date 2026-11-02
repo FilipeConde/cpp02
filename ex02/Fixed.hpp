@@ -21,6 +21,8 @@ class Fixed{
 
     int getRawBits() const;
     void setRawBits(int const raw);
+
+    bool operator > (const Fixed &other) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &src);

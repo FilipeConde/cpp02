@@ -47,6 +47,10 @@ float Fixed::toFloat( void ) const{
     return ((float)_fixedVal / (1 << _fractionalBits));
 }
 
+bool Fixed::operator>(const Fixed &rhs) const {
+    return this->_fixedVal > rhs.getRawBits();
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &src) {
     out << src.toFloat();
     return (out);

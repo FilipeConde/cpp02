@@ -13,12 +13,13 @@ int main(){
   // std::cout << b << std::endl;
   // std::cout << Fixed::max( a, b ) << std::endl;
 
-  int a = 1;
-  int b = 0;
+  // int a = 1;
+  // int b = 0;
 
   Fixed c(1.5f);
   Fixed d(2.3f);
-  // std::cout << (a < b) << std::endl;
+  // std::cout << (a > b) << std::endl;
+  std::cout << (c > d) << std::endl;
 
   return (0);
 }
