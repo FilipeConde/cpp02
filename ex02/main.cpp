@@ -18,8 +18,9 @@ int main(){
 
   // extra tests
 
-  Fixed c(1.5f);
-  Fixed d(2.3f);
+  Fixed c(1.52f);
+  Fixed d(2.32f);
+  Fixed e(2.32f);
 
   std::cout << "Must be 0: " << (c > d) << std::endl;
   std::cout << "Must be 1: " << (d > c) << std::endl;
@@ -29,5 +30,9 @@ int main(){
   std::cout << "Must be 0: " << (d < c) << std::endl;
   std::cout << "Must be 0: " << (d < d) << std::endl;
 
+  std::cout << "Must be 0: " << (c >= d) << std::endl;
+  std::cout << "Must be 1: " << (d >= c) << std::endl;
+  std::cout << "Must be 1: " << (d >= d) << std::endl;
+  std::cout << "Must be 1: " << (d >= e) << std::endl;
   return (0);
 }

@@ -54,6 +54,10 @@ bool Fixed::operator<(const Fixed &rhs) const {
     return this->_fixedVal < rhs.getRawBits();
 }
 
+bool Fixed::operator>=(const Fixed &rhs) const {
+    return this->_fixedVal >= rhs.getRawBits();
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &src) {
     out << src.toFloat();
     return (out);
