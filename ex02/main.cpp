@@ -25,5 +25,9 @@ int main(){
   std::cout << "Must be 1: " << (d > c) << std::endl;
   std::cout << "Must be 0: " << (d > d) << std::endl;
 
+  std::cout << "Must be 1: " << (c < d) << std::endl;
+  std::cout << "Must be 0: " << (d < c) << std::endl;
+  std::cout << "Must be 0: " << (d < d) << std::endl;
+
   return (0);
 }
