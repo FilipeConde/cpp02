@@ -16,10 +16,13 @@ int main(){
   // int a = 1;
   // int b = 0;
 
+  // extra tests
+
   Fixed c(1.5f);
   Fixed d(2.3f);
-  // std::cout << (a > b) << std::endl;
-  std::cout << (c > d) << std::endl;
+
+  std::cout << "Must be 0: " << (c > d) << std::endl;
+  std::cout << "Must be 1: " << (d > c) << std::endl;
 
   return (0);
 }
