@@ -20,7 +20,6 @@ Fixed::Fixed(const Fixed &other) : _fixedVal(other._fixedVal) {
 
 Fixed &Fixed::operator=(const Fixed &other) {
     std::cout << "Copy assignment operator called" << std::endl;
-    getRawBits();
     if(this != &other){
         this->_fixedVal = other._fixedVal;
     }
@@ -46,4 +45,9 @@ int Fixed::toInt() const{
 
 float Fixed::toFloat( void ) const{
     return ((float)_fixedVal / (1 << _fractionalBits));
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &src) {
+    out << src.toFloat();
+    return (out);
 }
