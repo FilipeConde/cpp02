@@ -51,6 +51,7 @@ int main(){
   std::cout << "Must be 3.84: " << (c + d) << std::endl;
   std::cout << "Must be appr. -0.8: " << (c - d) << std::endl;
   std::cout << "Must be appr. 3.5264: " << (c * d) << std::endl;
+  std::cout << "Must be appr. 0.655172414: " << (c / d) << std::endl;
 
   return (0);
 }
