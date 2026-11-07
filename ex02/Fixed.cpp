@@ -84,6 +84,14 @@ Fixed Fixed::operator - (const Fixed &rhs) const {
     return res;
 }
 
+Fixed Fixed::operator * (const Fixed &rhs) const {
+    Fixed res;
+
+    long long temp = ((long long)this->getRawBits() * rhs.getRawBits()) >> Fixed::_fractionalBits;
+    res.setRawBits((int)temp);
+    return res;
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &src) {
     out << src.toFloat();
     return (out);
