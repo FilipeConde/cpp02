@@ -70,6 +70,20 @@ bool Fixed::operator!=(const Fixed &rhs) const {
     return this->_fixedVal != rhs.getRawBits();
 }
 
+Fixed Fixed::operator + (const Fixed &rhs) const {
+    Fixed res;
+
+    res.setRawBits(this->getRawBits() + rhs.getRawBits());
+    return res;
+}
+
+Fixed Fixed::operator - (const Fixed &rhs) const {
+    Fixed res;
+
+    res.setRawBits(this->getRawBits() - rhs.getRawBits());
+    return res;
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &src) {
     out << src.toFloat();
     return (out);

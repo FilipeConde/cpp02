@@ -48,5 +48,8 @@ int main(){
   std::cout << "Must be 0: " << (d != d) << std::endl;
   std::cout << "Must be 0: " << (d != e) << std::endl;
 
+  std::cout << "Must be 3.84: " << (c + d) << std::endl;
+  std::cout << "Must be -0.8: " << (c - d) << std::endl;
+
   return (0);
 }
