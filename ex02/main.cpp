@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Fixed.hpp"
+#include <cmath>
 
 int main(){
 
@@ -53,8 +54,12 @@ int main(){
   std::cout << "Must be appr. 3.5264: " << (c * d) << std::endl;
   std::cout << "Must be appr. 0.655172414: " << (c / d) << std::endl;
 
+  std::cout << "Var 'c' must be  1.51935: " << c << std::endl;
   std::cout << "Must be appr. 1.52344: " << ++c << std::endl;
-  // std::cout << "Must be 3.84: " << c++ << std::endl;
+  
+  c.setRawBits(roundf(1.52f * (1 << 8)));
+  std::cout << "Must be 1.51953: " << (c++) << std::endl;
+  std::cout << "Var 'c' must be  1.52344: " << c << std::endl;
 
   return (0);
 }
