@@ -111,6 +111,17 @@ Fixed Fixed::operator ++ (int) {
     return temp;
 }
 
+Fixed &Fixed::operator -- () {
+    this->_fixedVal--;
+    return *this;
+}
+
+Fixed Fixed::operator -- (int) {
+    Fixed temp(*this);
+    this->_fixedVal--;
+    return temp;
+}
+
 std::ostream &operator<<(std::ostream &out, const Fixed &src) {
     out << src.toFloat();
     return (out);

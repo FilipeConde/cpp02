@@ -35,6 +35,8 @@ class Fixed{
     Fixed operator / (const Fixed &other) const;
     Fixed &operator ++ ();
     Fixed operator ++ (int);
+    Fixed &operator -- ();
+    Fixed operator -- (int);
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &src);
