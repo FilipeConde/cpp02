@@ -62,7 +62,7 @@ int main(){
   std::cout << "Var 'c' must be  1.52344: " << c << std::endl;
   
   c.setRawBits(roundf(1.52f * (1 << 8)));
-  std::cout << "Var 'c' must be  1.51935: " << c << std::endl;
+  std::cout << "Var 'c' must be  1.51953: " << c << std::endl;
   std::cout << "Must be appr. 1.51562: " << --c << std::endl;
   
   c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
