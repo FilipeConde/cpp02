@@ -22,6 +22,8 @@ int main(){
   Fixed c(1.52f);
   Fixed d(2.32f);
   Fixed e(2.32f);
+  const Fixed f(4.25f);
+  const Fixed g(2.75f);
 
   std::cout << "Must be 0: " << (c > d) << std::endl;
   std::cout << "Must be 1: " << (d > c) << std::endl;
@@ -68,6 +70,12 @@ int main(){
   c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
   std::cout << "Must be 1.51953: " << (c--) << std::endl;
   std::cout << "Var 'c' must be  1.51562: " << c << std::endl;
-
+  
+  c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
+  std::cout << "min between 1.52f and 2.32f: " << Fixed::min(c, d) << std::endl;
+  std::cout << "max between 1.52f and 2.32f: " << Fixed::max(c, d) << std::endl;
+  std::cout << "min between 4.25f and 2.75f: " << Fixed::min(f, g) << std::endl;
+  std::cout << "max between 4.25f and 2.75f: " << Fixed::max(f, g) << std::endl;
+  // build tests for modification of const values
   return (0);
 }

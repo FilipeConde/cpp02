@@ -126,3 +126,27 @@ std::ostream &operator<<(std::ostream &out, const Fixed &src) {
     out << src.toFloat();
     return (out);
 }
+
+Fixed &Fixed::min(Fixed &a, Fixed &b) {
+    if (a < b)
+        return (a);
+    return (b);
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b) {
+    if (a > b)
+        return (a);
+    return (b);
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b) {
+    if (a < b)
+        return (a);
+    return (b);
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b) {
+    if (a > b)
+        return (a);
+    return (b);
+}
