@@ -4,78 +4,78 @@
 
 int main(){
 
-  // Fixed a;
-  // Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-  // std::cout << a << std::endl;
-  // std::cout << ++a << std::endl;
-  // std::cout << a << std::endl;
-  // std::cout << a++ << std::endl;
-  // std::cout << a << std::endl;
-  // std::cout << b << std::endl;
-  // std::cout << Fixed::max( a, b ) << std::endl;
+  Fixed a;
+  Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+  std::cout << a << std::endl;
+  std::cout << ++a << std::endl;
+  std::cout << a << std::endl;
+  std::cout << a++ << std::endl;
+  std::cout << a << std::endl;
+  std::cout << b << std::endl;
+  std::cout << Fixed::max( a, b ) << std::endl;
 
   // int a = 1;
   // int b = 0;
 
   // extra tests
 
-  Fixed c(1.52f);
-  Fixed d(2.32f);
-  Fixed e(2.32f);
-  const Fixed f(4.25f);
-  const Fixed g(2.75f);
+  // Fixed c(1.52f);
+  // Fixed d(2.32f);
+  // Fixed e(2.32f);
+  // const Fixed f(4.25f);
+  // const Fixed g(2.75f);
 
-  std::cout << "Must be 0: " << (c > d) << std::endl;
-  std::cout << "Must be 1: " << (d > c) << std::endl;
-  std::cout << "Must be 0: " << (d > d) << std::endl;
+  // std::cout << "Must be 0: " << (c > d) << std::endl;
+  // std::cout << "Must be 1: " << (d > c) << std::endl;
+  // std::cout << "Must be 0: " << (d > d) << std::endl;
 
-  std::cout << "Must be 1: " << (c < d) << std::endl;
-  std::cout << "Must be 0: " << (d < c) << std::endl;
-  std::cout << "Must be 0: " << (d < d) << std::endl;
+  // std::cout << "Must be 1: " << (c < d) << std::endl;
+  // std::cout << "Must be 0: " << (d < c) << std::endl;
+  // std::cout << "Must be 0: " << (d < d) << std::endl;
 
-  std::cout << "Must be 0: " << (c >= d) << std::endl;
-  std::cout << "Must be 1: " << (d >= c) << std::endl;
-  std::cout << "Must be 1: " << (d >= d) << std::endl;
-  std::cout << "Must be 1: " << (d >= e) << std::endl;
+  // std::cout << "Must be 0: " << (c >= d) << std::endl;
+  // std::cout << "Must be 1: " << (d >= c) << std::endl;
+  // std::cout << "Must be 1: " << (d >= d) << std::endl;
+  // std::cout << "Must be 1: " << (d >= e) << std::endl;
 
-  std::cout << "Must be 1: " << (c <= d) << std::endl;
-  std::cout << "Must be 0: " << (d <= c) << std::endl;
-  std::cout << "Must be 1: " << (d <= d) << std::endl;
-  std::cout << "Must be 1: " << (d <= e) << std::endl;
+  // std::cout << "Must be 1: " << (c <= d) << std::endl;
+  // std::cout << "Must be 0: " << (d <= c) << std::endl;
+  // std::cout << "Must be 1: " << (d <= d) << std::endl;
+  // std::cout << "Must be 1: " << (d <= e) << std::endl;
   
-  std::cout << "Must be 0: " << (c == d) << std::endl;
-  std::cout << "Must be 1: " << (d == d) << std::endl;
-  std::cout << "Must be 1: " << (d == e) << std::endl;
+  // std::cout << "Must be 0: " << (c == d) << std::endl;
+  // std::cout << "Must be 1: " << (d == d) << std::endl;
+  // std::cout << "Must be 1: " << (d == e) << std::endl;
 
-  std::cout << "Must be 1: " << (c != d) << std::endl;
-  std::cout << "Must be 0: " << (d != d) << std::endl;
-  std::cout << "Must be 0: " << (d != e) << std::endl;
+  // std::cout << "Must be 1: " << (c != d) << std::endl;
+  // std::cout << "Must be 0: " << (d != d) << std::endl;
+  // std::cout << "Must be 0: " << (d != e) << std::endl;
 
-  std::cout << "Must be appr. 3.84: " << (c + d) << std::endl;
-  std::cout << "Must be appr. -0.8: " << (c - d) << std::endl;
-  std::cout << "Must be appr. 3.5264: " << (c * d) << std::endl;
-  std::cout << "Must be appr. 0.655172414: " << (c / d) << std::endl;
+  // std::cout << "Must be appr. 3.84: " << (c + d) << std::endl;
+  // std::cout << "Must be appr. -0.8: " << (c - d) << std::endl;
+  // std::cout << "Must be appr. 3.5264: " << (c * d) << std::endl;
+  // std::cout << "Must be appr. 0.655172414: " << (c / d) << std::endl;
 
-  std::cout << "Var 'c' must be  1.51935: " << c << std::endl;
-  std::cout << "Must be appr. 1.52344: " << ++c << std::endl;
+  // std::cout << "Var 'c' must be  1.51935: " << c << std::endl;
+  // std::cout << "Must be appr. 1.52344: " << ++c << std::endl;
   
-  c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
-  std::cout << "Must be 1.51953: " << (c++) << std::endl;
-  std::cout << "Var 'c' must be  1.52344: " << c << std::endl;
+  // c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
+  // std::cout << "Must be 1.51953: " << (c++) << std::endl;
+  // std::cout << "Var 'c' must be  1.52344: " << c << std::endl;
   
-  c.setRawBits(roundf(1.52f * (1 << 8)));
-  std::cout << "Var 'c' must be  1.51953: " << c << std::endl;
-  std::cout << "Must be appr. 1.51562: " << --c << std::endl;
+  // c.setRawBits(roundf(1.52f * (1 << 8)));
+  // std::cout << "Var 'c' must be  1.51953: " << c << std::endl;
+  // std::cout << "Must be appr. 1.51562: " << --c << std::endl;
   
-  c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
-  std::cout << "Must be 1.51953: " << (c--) << std::endl;
-  std::cout << "Var 'c' must be  1.51562: " << c << std::endl;
+  // c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
+  // std::cout << "Must be 1.51953: " << (c--) << std::endl;
+  // std::cout << "Var 'c' must be  1.51562: " << c << std::endl;
   
-  c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
-  std::cout << "min between 1.52f and 2.32f: " << Fixed::min(c, d) << std::endl;
-  std::cout << "max between 1.52f and 2.32f: " << Fixed::max(c, d) << std::endl;
-  std::cout << "min between 4.25f and 2.75f: " << Fixed::min(f, g) << std::endl;
-  std::cout << "max between 4.25f and 2.75f: " << Fixed::max(f, g) << std::endl;
+  // c.setRawBits(roundf(1.52f * (1 << 8))); // restore value
+  // std::cout << "min between 1.52f and 2.32f: " << Fixed::min(c, d) << std::endl;
+  // std::cout << "max between 1.52f and 2.32f: " << Fixed::max(c, d) << std::endl;
+  // std::cout << "min between 4.25f and 2.75f: " << Fixed::min(f, g) << std::endl;
+  // std::cout << "max between 4.25f and 2.75f: " << Fixed::max(f, g) << std::endl;
   // build tests for modification of const values
   return (0);
 }
